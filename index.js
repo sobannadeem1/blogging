@@ -12,6 +12,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors());
+
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", Router);
@@ -19,7 +20,6 @@ app.use("/", Router);
 const PORT = process.env.PORT || 8000;
 
 Connection();
-
 if (process.env.NODE_ENV == "production") {
   app.use(express.static("client/build"));
 }

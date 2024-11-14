@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
+mongoose.set("strictQuery", true);
 
 const Connection = async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.hbeih.mongodb.net/blogging?retryWrites=true&w=majority&appName=Cluster0`,
+      "mongodb+srv://soban312004:f5dX6xmCLskUCYGg@cluster0.hbeih.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
