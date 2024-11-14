@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 
 const Connection = async () => {
+  const URL = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.hbeih.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
   try {
-    await mongoose.connect("mongodb://localhost:27017/blogging", {
+    await mongoose.connect(URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
