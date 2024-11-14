@@ -1,6 +1,5 @@
 {
   "name": "client",
-  "homepage": "https://sobannadeem1.github.io/blogging",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
